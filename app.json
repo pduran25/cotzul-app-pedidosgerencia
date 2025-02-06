@@ -1,0 +1,43 @@
+{
+  "expo": {
+    "name": "Cotzul Pedidos",
+    "slug": "cotzul-app-pedidos",
+    "version": "1.0.3",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "jsEngine": "hermes",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.pedroduran25.apppedidos"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "versionCode": 3,
+      "package": "com.pedroduran25.apppedidos"
+    },
+    "web": {
+      "favicon": "./assets/icon.png"
+    },
+    "description": "",
+    "extra": {
+      "eas": {
+        "projectId": "9d219447-fc95-475d-bfb4-3d268e6996e2"
+      }
+    }
+  }
+}
