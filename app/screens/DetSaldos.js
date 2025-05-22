@@ -185,7 +185,7 @@ const styles = StyleSheet.create({
         height: 35,
         paddingVertical: 7,
         paddingHorizontal: 5,
-        fontSize:10
+        fontSize:13
     },
     modalText: {
       marginBottom: 15,

@@ -167,7 +167,7 @@ class ModalDetallePedidos extends Component{
           
               <View>
                   
-              <View style={{ marginHorizontal:0, marginTop:10, fontSize:10}}>
+              <View style={{ marginHorizontal:0, marginTop:10, fontSize:13}}>
                       <View style={{flexDirection: 'row'}}>
                           <View style={{width:330, backgroundColor:'#9c9c9c', borderColor: 'black', borderWidth: 1}}>
                               <Text style={styles.tabletitle}>{item.pd_descripcion}</Text>
@@ -346,7 +346,7 @@ tabletitle:{
   fontWeight: 'bold',
   textAlign: 'center',
   paddingHorizontal: 5,
-  fontSize: 12
+  fontSize: 13
 },
 tabletitle2:{
   fontWeight: 'bold',

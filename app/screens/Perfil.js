@@ -166,3 +166,4 @@ function defaultValueUser(){
         us_nomtipoadm: ""
     }
 }
+

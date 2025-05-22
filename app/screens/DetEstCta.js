@@ -346,7 +346,7 @@ titlesWrapper2:{
       textAlign: 'center',
       height: 25,
       fontWeight: "bold",
-      fontSize: 12,
+      fontSize: 13,
       paddingTop:8,
   },
     modalText: {

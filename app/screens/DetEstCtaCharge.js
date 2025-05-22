@@ -192,14 +192,14 @@ const styles = StyleSheet.create({
     },
     tablevalm:{
         textAlign: 'center',
-        fontSize: 10,
+        fontSize: 13,
         paddingVertical:5,
         paddingHorizontal: 5,
     },
     tableval:{
         textAlign: 'center',
         height: 30,
-        fontSize: 10,
+        fontSize: 13,
         paddingVertical:5,
         paddingHorizontal: 5,
     },
@@ -219,7 +219,7 @@ tablevaltit:{
     textAlign: 'center',
     height: 35,
     fontWeight: "bold",
-    fontSize: 10,
+    fontSize: 13,
 },
 
 })

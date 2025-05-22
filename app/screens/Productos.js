@@ -168,62 +168,10 @@ export default function Productos(props){
 
 
 
-   /* async function listarPedidos(estatus){
-        try {
-           
-            console.log("entro prueba item");
-          const response = await fetch(
-            "https://app.cotzul.com/Pedidos/getAllPedidosN.php?idestatus="+estatus+"&usuario="+dataUser.us_usuario+"&cadena="+cadena
-          );
-          console.log("https://app.cotzul.com/Pedidos/getAllPedidosN.php?idestatus="+estatus+"&usuario="+dataUser.us_usuario+"&cadena="+cadena);
-          const jsonResponse = await response.json();
-          console.log("entro prueba item1"+jsonResponse?.cabpedidos);
-          
-          
-          setData(jsonResponse?.cabpedidos);
-          cargarDetalles(jsonResponse?.cabpedidos);
-
-          if(estatus != -1){
-            listarDetPedidos();
-          }else
-            setLoading(true);
-
-          
-        } catch (error) {
-         setLoading(false)
-          console.log("un error cachado listar pedidos");
-          console.log(error);
-        }
-    };*/
-
-   /* async function listarPedidos(estatus) {
-        try {
-            const response = await fetch(`https://app.cotzul.com/Pedidos/getAllPedidosN.php?idestatus=${estatus}&usuario=${dataUser.us_usuario}&cadena=${cadena}`);
-            const textResponse = await response.text();
-            console.log("Respuesta del servidor:", textResponse);
-            let jsonResponse;
-            try {
-                jsonResponse = JSON.parse(textResponse);
-            } catch (jsonError) {
-                console.error("Error al parsear JSON:", jsonError);
-                return;
-            }
-            if (jsonResponse && jsonResponse.cabpedidos) {
-                setData(jsonResponse.cabpedidos);
-                cargarDetalles(jsonResponse.cabpedidos);
-            } else {
-                console.warn("La respuesta JSON no contiene 'cabpedidos'");
-            }
-            setLoading(true);
-        } catch (error) {
-            setLoading(false);
-            console.error("Error al listar pedidos:", error);
-        }
-    }*/
-
     async function listarPedidos(estatus) {
         try {
             const response = await fetch(`https://app.cotzul.com/Pedidos/getAllPedidosN.php?idestatus=${estatus}&usuario=${dataUser.us_usuario}&cadena=${cadena}`);
+            console.log("Ruta enviada:"+`https://app.cotzul.com/Pedidos/getAllPedidosN.php?idestatus=${estatus}&usuario=${dataUser.us_usuario}&cadena=${cadena}`);
             const textResponse = await response.text(); // Obtiene la respuesta como texto
             
             console.log("Respuesta del servidor:", textResponse);
@@ -239,9 +187,10 @@ export default function Productos(props){
             const jsonResponse = JSON.parse(textResponse);
             setData(jsonResponse?.cabpedidos || []); // Maneja el caso en el que `cabpedidos` sea undefined
             cargarDetalles(jsonResponse?.cabpedidos || []);
-            setLoading(true);
+            
             if(estatus != -1){
                 listarDetPedidos();
+                //setLoading(true);
               }else
                 setLoading(true);
         } catch (error) {
@@ -410,22 +359,9 @@ export default function Productos(props){
                 <Text style={styles.titlesSubtitle}>Cotzul S.A.</Text>
                 <Text style={styles.titlespick2}>Usuario: {dataUser.us_nombre}</Text>
             </View>
-            {/*Search*/}
+            
             <Text style={styles.titlespick}>Tipo:</Text>
-            {/*<RNPickerSelect
-                useNativeAndroidPickerStyle={false}
-                style={pickerStyle}
-                onValueChange={(tpedido) => actualizaPedido(tpedido)}
-                placeholder={{ label: "SELECCIONAR", value: -1 }}
-                items={[
-                    { label: "TODOS", value: 0},
-                    { label: "NUEVOS", value: 1 },
-                    { label: "BACKORDER", value: 2 },
-                    { label: "NO APROBADOS", value: 4 },
-                    { label: "REACTIVADOS", value: 3 },
-                    
-                ]}
-            />*/}
+            
             <Picker
               onChanged={setPicker}
               options={[
@@ -492,18 +428,19 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20,
     },
     tabletitle:{
-        fontSize: 8,
+        fontSize: 13,
+        textAlign: 'center'
     },
     tabletext:{
-        fontSize: 8,
+        fontSize: 12,
     },
     tableval:{
-        fontSize: 8,
+        fontSize: 12,
         textAlign: 'right'
     },
 titlesSubtitle:{
     fontWeight: 'bold',
-   fontSize: 16,
+   fontSize: 20,
    color: colors.textDark,
 },
 titlesTitle:{
@@ -513,7 +450,7 @@ titlesTitle:{
 },
 titlesdetalle:{
     // fontFamily: 
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: 'bold',
     color: colors.textDark,
     paddingTop: 10,

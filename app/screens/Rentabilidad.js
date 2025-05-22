@@ -857,12 +857,12 @@ const styles = StyleSheet.create({
     }, 
     titlesSubtitle:{
        // fontFamily: 
-       fontSize: 12,
+       fontSize: 15,
        color: colors.textDark,
     },
     titlesTitle:{
         // fontFamily: 
-       fontSize: 25,
+       fontSize: 28,
        color: colors.textDark,
     },
     scrollview:{
@@ -923,24 +923,24 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         height: 60,
         fontWeight: "bold",
-        fontSize: 10,
+        fontSize: 12,
     },
     tablevaltit2:{
         textAlign: 'left',
         height: 25,
-        fontSize: 10,
-        paddingLeft: 10,
+        fontSize: 11,
+        paddingLeft: 12,
     },
     tableval:{
         textAlign: 'center',
         height: 30,
-        fontSize: 10,
+        fontSize: 12,
         paddingVertical:5,
         paddingHorizontal: 5,
     },
     tablevalm:{
         textAlign: 'center',
-        fontSize: 11,
+        fontSize: 12,
         paddingVertical:5,
         paddingHorizontal: 5,
     },

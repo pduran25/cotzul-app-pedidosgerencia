@@ -669,14 +669,14 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         textAlign: 'center',
         paddingHorizontal: 5,
-        fontSize: 12
+        fontSize: 13
     },
     tableval:{
         textAlign: 'center',
         height: 40,
         paddingVertical: 7,
         paddingHorizontal: 5,
-        fontSize: 12
+        fontSize: 13
     },
     btnContainerLogin:{
         marginTop: 10, 
@@ -711,7 +711,7 @@ const styles = StyleSheet.create({
     },
     titlesdetalle:{
         textAlign: 'center',
-        fontSize: 12
+        fontSize: 15
     },
     scrollview:{
         marginTop:10,

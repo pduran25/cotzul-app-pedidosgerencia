@@ -87,9 +87,9 @@ export default function ObsCharge(props) {
 const styles = StyleSheet.create({
 
     tabletitle:{
-        fontSize: 10,
+        fontSize: 13,
     },
     tabletext:{
-        fontSize: 10,
+        fontSize: 13,
     },
 })
